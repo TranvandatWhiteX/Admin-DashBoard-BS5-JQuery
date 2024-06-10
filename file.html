@@ -96,7 +96,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-1"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-1"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-2">
@@ -113,7 +115,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-2"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-2"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-3">
@@ -130,7 +134,9 @@
                                     <button data-bs-toggle="modal" data-bs-target="#deleteModal"
                                         class="btn btn-danger delete-row-btn" data-row-id="row-3"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-3"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-4">
@@ -147,7 +153,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-4"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-4"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-5">
@@ -164,7 +172,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-5"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-5"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-6">
@@ -181,7 +191,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-6"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-6"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-7">
@@ -198,7 +210,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-7"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-7"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-8">
@@ -215,7 +229,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-8"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-8"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                             <tr id="row-9">
@@ -232,7 +248,9 @@
                                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal" data-row-id="row-9"><i
                                             class="fa-solid fa-trash-can"></i></button>
-                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                    <button class="btn btn-success update-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal" data-row-id="row-9"><i
+                                            class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -285,6 +303,42 @@
                                     <button type="button" id="deleteBtn" class="btn btn-danger">Xóa</button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Update User Modal -->
+                    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <form action="" id="updateForm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Cập nhật tài khoản</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" id="updateRowId">
+                                        <div class="form-group my-2">
+                                            <label for="file" class="mb-2">File</label>
+                                            <input type="text" id="file" class="form-control" required>
+                                        </div>
+                                        <div>
+                                            <label for="uploadDate" class="mb-2">Ngày tải lên</label>
+                                            <input type="date" id="uploadDate" class="form-control" required>
+                                        </div>
+                                        <div class="form-group my-2">
+                                            <label for="price" class="mb-2">Giá</label>
+                                            <input type="number" id="price" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Hủy</button>
+                                        <button type="submit" id="updateBtn" class="btn btn-success">Sửa</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
             </main>
@@ -360,7 +414,7 @@
                 <td><i class="fa-solid fa-comment me-2"></i>0</td>
                 <td>${new Date().toLocaleDateString()}</td>
                 <td><i class="fa-solid fa-dollar-sign me-2"></i>${price}</td>
-                <td>
+                <td class="text-center">
                     <button class="btn btn-primary"><i class="fa-solid fa-file"></i></button>
                     <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa-solid fa-trash-can"></i></button>
                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
@@ -384,6 +438,53 @@
                     $('#deleteModal').modal('hide');
                 }
             });
+
+            let selectedRowId;
+
+            // When the update button is clicked, populate the form with the row data
+            $('.update-row-btn').on('click', function () {
+                selectedRowId = $(this).data('row-id');
+                const row = $(`#${selectedRowId}`);
+
+                const file = row.find('td').eq(1).text().trim();
+                const uploadDate = row.find('td').eq(5).text().trim();
+                const price = row.find('td').eq(6).text().trim().replace(/\D/g, ''); // Remove non-digit characters
+
+                $('#updateRowId').val(selectedRowId);
+                $('#updateForm #file').val(file);
+                $('#updateForm #uploadDate').val(formatDate(uploadDate)); // Convert to yyyy-mm-dd
+                $('#updateForm #price').val(price);
+            });
+
+            // When the update form is submitted, update the table row
+            $('#updateForm').on('submit', function (e) {
+                e.preventDefault();
+
+                const rowId = $('#updateRowId').val();
+                const file = $('#updateForm #file').val();
+                const uploadDate = $('#updateForm #uploadDate').val();
+                const price = $('#updateForm #price').val();
+
+                const row = $(`#${rowId}`);
+
+                row.find('td').eq(1).html(`<i class="fa-solid fa-file-pdf me-2"></i>${file}`);
+                row.find('td').eq(5).text(formatDateReverse(uploadDate)); // Convert to dd/mm/yyyy
+                row.find('td').eq(6).html(`<i class="fa-solid fa-dollar-sign me-2"></i>${price}`);
+
+                $('#updateModal').modal('hide');
+            });
+
+            // Format date from dd/mm/yyyy to yyyy-mm-dd
+            function formatDate(dateStr) {
+                const parts = dateStr.split('/');
+                return `${parts[2]}-${parts[1]}-${parts[0]}`;
+            }
+
+            // Format date from yyyy-mm-dd to dd/mm/yyyy
+            function formatDateReverse(dateStr) {
+                const parts = dateStr.split('-');
+                return `${parts[2]}/${parts[1]}/${parts[0]}`;
+            }
         });
 
     </script>
