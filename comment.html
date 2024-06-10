@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Quản lý bình luận</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+        </aside>
+        <div class="main">
+            <!-- NAVBAR -->
+            <nav class="d-flex justify-content-end" id="header"></nav>
+            <!-- NAVBAR -->
+            <main>
+                <div>
+                    <h3>Quản lý bình luận</h3>
+
+                </div>
+                <div class="row justify-content-center my-2">
+                    <div class="col-lg-7">
+                        <div class="list-group" id="commentList">
+                            <div class="list-group-item py-3" id="comment-1">
+                                <div class="pb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </div>
+                                <h5 class="mb-1">Tài liệu hay, chất lượng. Có rất nhiều tài liệu, đa dạng thể loại, có
+                                    cả các trường đại học lớn nước ngoài.</h5>
+                                <p class="mb-1">27/02/2024</p>
+                                <small>Nhận xét bởi <strong>Trần Văn Đạt</strong></small>
+                                <div>
+                                    <button class="btn btn-danger delete-comment-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-comment-id="comment-1">Xóa bình
+                                        luận</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item py-3" id="comment-2">
+                                <div class="pb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                                </div>
+                                <h5 class="mb-1">Tài liệu hay, chất lượng. Có rất nhiều tài liệu, đa dạng thể loại, có
+                                    cả các trường đại học lớn nước ngoài.</h5>
+                                <p class="mb-1">27/02/2024</p>
+                                <small>Nhận xét bởi <strong>Trần Văn Đạt</strong></small>
+                                <div>
+                                    <button class="btn btn-danger delete-comment-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-comment-id="comment-2">Xóa bình
+                                        luận</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item py-3" id="comment-3">
+                                <div class="pb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h5 class="mb-1">Tài liệu hay, chất lượng. Có rất nhiều tài liệu, đa dạng thể loại, có
+                                    cả các trường đại học lớn nước ngoài.</h5>
+                                <p class="mb-1">27/02/2024</p>
+                                <small>Nhận xét bởi <strong>Trần Văn Đạt</strong></small>
+                                <div>
+                                    <button class="btn btn-danger delete-comment-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-comment-id="comment-3">Xóa bình
+                                        luận</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item py-3" id="comment-4">
+                                <div class="pb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h5 class="mb-1">Tài liệu hay, chất lượng. Có rất nhiều tài liệu, đa dạng thể loại, có
+                                    cả các trường đại học lớn nước ngoài.</h5>
+                                <p class="mb-1">27/02/2024</p>
+                                <small>Nhận xét bởi <strong>Trần Văn Đạt</strong></small>
+                                <div>
+                                    <button class="btn btn-danger delete-comment-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-comment-id="comment-4">Xóa bình
+                                        luận</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item py-3" id="comment-5">
+                                <div class="pb-2">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                                </div>
+                                <h5 class="mb-1">Tài liệu hay, chất lượng. Có rất nhiều tài liệu, đa dạng thể loại, có
+                                    cả các trường đại học lớn nước ngoài.</h5>
+                                <p class="mb-1">27/02/2024</p>
+                                <small>Nhận xét bởi <strong>Trần Văn Đạt</strong></small>
+                                <div>
+                                    <button class="btn btn-danger delete-comment-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-comment-id="comment-5">Xóa bình
+                                        luận</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center w-100 d-flex justify-content-center">
+                            <nav style="background: none !important;" aria-label="Page navigation example"
+                                class="w-100 text-center d-flex justify-content-center">
+                                <ul class="pagination" id="commentPagination">
+                                    <li class="page-item" id="prevCommentPage"><a class="page-link"
+                                            href="#">Previous</a></li>
+                                    <!-- Comment page numbers will be inserted here by jQuery -->
+                                    <li class="page-item" id="nextCommentPage"><a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Xóa bình luận</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Bạn có chắc chắn muốn xóa tài liệu này?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Hủy</button>
+                                        <button type="button" id="deleteBtn" class="btn btn-danger">Xóa</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div>
+                            <h3>Tỉ lệ đánh giá</h3>
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/load-common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        $(document).ready(function () {
+            const commentsPerPage = 2; // Number of comments to display per page
+            const comments = $('#commentList .list-group-item');
+            const commentPagination = $('#commentPagination');
+            let currentPage = 1;
+            function updatePagination() {
+                const visibleComments = comments.filter(':not(.d-none)');
+                const commentsCount = visibleComments.length;
+                const pageCount = Math.ceil(commentsCount / commentsPerPage); // Total number of pages
+                // Clear existing pagination controls
+                commentPagination.find('li.page-item:not(#prevCommentPage, #nextCommentPage)').remove();
+                // Create new pagination controls
+                for (let i = 1; i <= pageCount; i++) {
+                    commentPagination.find('#nextCommentPage').before('<li class="page-item"><a class="page-link" href="#">' + i + '</a></li>');
+                }
+                // Adjust current page if it exceeds the page count
+                if (currentPage > pageCount) {
+                    currentPage = pageCount;
+                }
+                // Show the comments for the current page
+                showPage(currentPage);
+            }
+            function showPage(page) {
+                comments.hide();
+                const visibleComments = comments.filter(':not(.d-none)');
+                visibleComments.slice((page - 1) * commentsPerPage, page * commentsPerPage).show();
+            }
+            // Initialize the first page
+            updatePagination();
+            // Handle page click
+            commentPagination.on('click', 'li a', function (event) {
+                event.preventDefault();
+                const pageText = $(this).text();
+                if (pageText === 'Previous') {
+                    if (currentPage > 1) {
+                        currentPage--;
+                    }
+                } else if (pageText === 'Next') {
+                    if (currentPage < Math.ceil(comments.filter(':not(.d-none)').length / commentsPerPage)) {
+                        currentPage++;
+                    }
+                } else {
+                    currentPage = parseInt(pageText);
+                }
+                showPage(currentPage);
+            });
+            let commentToDelete;
+            $(document).on('click', '.delete-comment-btn', function () {
+                commentToDelete = $(this).data('comment-id');
+            });
+            $('#deleteBtn').on('click', function () {
+                if (commentToDelete) {
+                    $('#' + commentToDelete).addClass('d-none');
+                    updatePagination();
+                    $('#exampleModal').modal('hide');
+                }
+            });
+        });
+    </script>
+    <script>
+        const pieChart = document.getElementById('pieChart');
+        new Chart(pieChart, {
+            type: 'pie',
+            data: {
+                labels: [
+                    '⭐', '⭐⭐', '⭐⭐⭐', '⭐⭐⭐⭐', '⭐⭐⭐⭐⭐'
+                ],
+                datasets: [{
+                    label: 'Đánh giá',
+                    data: [12500, 6200, 10020, 25123, 45200],
+                    hoverOffset: 4
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>

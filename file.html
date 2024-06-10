@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Quản lý tài liệu</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar"></aside>
+        <div class="main">
+            <!-- NAVBAR -->
+            <nav class="d-flex justify-content-end" id="header"></nav>
+            <!-- NAVBAR -->
+            <main>
+                <div class="d-flex justify-content-between">
+                    <h3>Quản lý tài liệu</h3>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            class="fa-solid fa-plus me-2"></i>Thêm tài liệu</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <form action="" id="fileForm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Thêm tài liệu</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group my-2">
+                                            <label for="file" class="mb-2">Loại tài liệu</label>
+                                            <select id="fileType" class="form-select">
+                                                <option value="pdf">PDF</option>
+                                                <option value="word">Word</option>
+                                                <option value="excel">Excel</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group my-2">
+                                            <label for="file" class="mb-2">Tài liệu</label>
+                                            <input type="file" id="file" class="form-control" required>
+                                        </div>
+                                        <div class="form-group my-2">
+                                            <label for="file" class="mb-2">Giá</label>
+                                            <input type="number" id="price" class="form-control"
+                                                placeholder="Nhập giá theo dollar..." required>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Hủy</button>
+                                        <button type="submit" id="addBtn" class="btn btn-primary">Thêm</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <table id="fileTable"
+                        class="table responsive w-100 nowrap table-bordered table-striped table-hover mt-4 mb-3">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>File</th>
+                                <th>Số lượt tải</th>
+                                <th>Số lượt xem</th>
+                                <th>Số lượt đánh giá</th>
+                                <th>Ngày tải lên</th>
+                                <th>Giá</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình Java</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>12,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>24,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>1,528</td>
+                                <td>22/05/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>120</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình hướng đối tượng</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>141,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>142,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>15,528</td>
+                                <td>28/05/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>150</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><i class="fa-solid fa-file-pdf me-2"></i>Những người khốn khổ</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>4,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>2,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>528</td>
+                                <td>27/05/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>50</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><i class="fa-solid fa-file-pdf me-2"></i>Thiết kế web</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>50,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>29,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>9,528</td>
+                                <td>22/06/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>100</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình PLC</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>1,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>28</td>
+                                <td>22/04/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>180</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><i class="fa-solid fa-file-word me-2"></i>Báo cáo tài chính</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>47,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>24,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>12,528</td>
+                                <td>22/01/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>150</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><i class="fa-solid fa-file-excel me-2"></i>Nguyên lý kế toán</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>16,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>12,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>9,528</td>
+                                <td>21/05/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>170</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><i class="fa-solid fa-file-pdf me-2"></i>Thiết kế ứng dụng di động</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>14,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>10,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>8,528</td>
+                                <td>22/03/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>120</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình Nhúng</td>
+                                <td><i class="fa-solid fa-circle-down me-2"></i>19,524</td>
+                                <td><i class="fa-solid fa-eye me-2"></i>14,154</td>
+                                <td><i class="fa-solid fa-comment me-2"></i>7,528</td>
+                                <td>26/03/2024</td>
+                                <td><i class="fa-solid fa-dollar-sign me-2"></i>190</td>
+                                <td>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center d-flex justify-content-center">
+                        <nav style="background: none !important;" aria-label="Page navigation example"
+                            class="text-center d-flex justify-content-center">
+                            <ul class="pagination" id="paginationControls">
+                                <li class="page-item" id="prevPage"><a class="page-link" href="#">Previous</a></li>
+                                <!-- Page numbers will be inserted here by jQuery -->
+                                <li class="page-item" id="nextPage"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="viewFileModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog h-100" style="max-width: 90%; max-height: 95%;">
+                            <div class="modal-content h-100">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Xem tài liệu</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body h-100">
+                                    <div id="viewer" class="h-100"></div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
+    <script src="./js/load-common.js"></script>
+    <script>
+        $(document).ready(function () {
+            const rowsPerPage = 5; // Number of rows to display per page
+            let rows = $('#fileTable tbody tr');
+            let rowsCount = rows.length;
+            let pageCount = Math.ceil(rowsCount / rowsPerPage); // Total number of pages
+            const paginationControls = $('#paginationControls');
+            let currentPage = 1;
+            function createPaginationControls() {
+                paginationControls.find('li.page-number').remove();
+                for (let i = 1; i <= pageCount; i++) {
+                    paginationControls.find('#nextPage').before('<li class="page-item page-number"><a class="page-link" href="#">' + i + '</a></li>');
+                }
+            }
+            function showPage(page) {
+                rows.hide();
+                rows.slice((page - 1) * rowsPerPage, page * rowsPerPage).show();
+            }
+            function refreshPagination() {
+                rows = $('#fileTable tbody tr');
+                rowsCount = rows.length;
+                pageCount = Math.ceil(rowsCount / rowsPerPage);
+                createPaginationControls();
+                showPage(currentPage);
+            }
+            createPaginationControls();
+            showPage(currentPage);
+            paginationControls.on('click', 'li a', function (event) {
+                event.preventDefault();
+                const pageText = $(this).text();
+                if (pageText === 'Previous') {
+                    if (currentPage > 1) {
+                        currentPage--;
+                    }
+                } else if (pageText === 'Next') {
+                    if (currentPage < pageCount) {
+                        currentPage++;
+                    }
+                } else {
+                    currentPage = parseInt(pageText);
+                }
+                showPage(currentPage);
+            });
+            $('#fileForm').on('submit', function (event) {
+                event.preventDefault();
+                const fileType = $('#fileType').val();
+                const fileName = $('#file')[0].files[0].name.substring(0, $('#file')[0].files[0].name.indexOf('.'));
+                const price = $('#price').val();
+                const newRow =
+                    `<tr>
+                        <td>${rowsCount + 1}</td>
+                        <td><i class="fa-solid fa-file-${fileType} me-2"></i>${fileName}</td>
+                        <td><i class="fa-solid fa-circle-down me-2"></i>0</td>
+                        <td><i class="fa-solid fa-eye me-2"></i>0</td>
+                        <td><i class="fa-solid fa-comment me-2"></i>0</td>
+                        <td>${new Date().toLocaleDateString()}</td>
+                        <td><i class="fa-solid fa-dollar-sign me-2"></i>${price}</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="fa-solid fa-file"></i></button>
+                            <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                            <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                        </td>
+                    </tr>`;
+                $('#fileTable tbody').append(newRow);
+                refreshPagination();
+                currentPage = pageCount; // Show the last page where the new row was added
+                showPage(currentPage);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
+    <script>
+        const config = {
+            documentId: '470d6e5c-0b4e-432a-95c8-ef27f5bfe522',
+            darkMode: true,
+        };
+        CloudPDF(config, document.getElementById('viewer')).then((instance) => {
+
+        });
+    </script>
+</body>
+
+</html>

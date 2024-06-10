@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Quản lý người dùng</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar"></aside>
+        <div class="main">
+            <!-- NAVBAR -->
+            <nav class="d-flex justify-content-end" id="header"></nav>
+            <!-- NAVBAR -->
+            <main>
+                <h3>Quản lý người dùng</h3>
+
+                <div class="row">
+                    <table id="fileTable"
+                        class="table responsive w-100 nowrap table-bordered table-striped table-hover mt-4 mb-3">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên người dùng</th>
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Ngày sinh</th>
+                                <th>Vai trò</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="row-1">
+                                <td>1</td>
+                                <td>Nguyễn Thế Đoàn</td>
+                                <td>0867625874</td>
+                                <td>Bắc Ninh, Việt Nam</td>
+                                <td>01/01/2003</td>
+                                <td><span class="badge bg-primary">USER</span></td>
+                                <td>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-row-id="row-1"><i
+                                            class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="row-2">
+                                <td>2</td>
+                                <td>Trần Văn Đạt</td>
+                                <td>0967627874</td>
+                                <td>Hưng Yên, Việt Nam</td>
+                                <td>01/09/2003</td>
+                                <td><span class="badge bg-primary">USER</span></td>
+                                <td>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"
+                                            data-row-id="row-2"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="row-3">
+                                <td>3</td>
+                                <td>Ngô Đức Lưu</td>
+                                <td>0467627874</td>
+                                <td>Bắc Ninh, Việt Nam</td>
+                                <td>07/08/2003</td>
+                                <td><span class="badge bg-primary">USER</span></td>
+                                <td>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"
+                                            data-row-id="row-3"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="row-4">
+                                <td>4</td>
+                                <td>Nguyễn Văn Công</td>
+                                <td>0467685873</td>
+                                <td>Quảng Ninh, Việt Nam</td>
+                                <td>07/03/2003</td>
+                                <td><span class="badge bg-primary">USER</span></td>
+                                <td>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"
+                                            data-row-id="row-4"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="row-5">
+                                <td>5</td>
+                                <td>Ngô Văn Quyền</td>
+                                <td>0767683873</td>
+                                <td>Nghệ An, Việt Nam</td>
+                                <td>15/03/2003</td>
+                                <td><span class="badge bg-primary">USER</span></td>
+                                <td>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"
+                                            data-row-id="row-5"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="row-6">
+                                <td>6</td>
+                                <td>Ma Thế Lực</td>
+                                <td>0267687879</td>
+                                <td>Bình Dương, Việt Nam</td>
+                                <td>15/012/2003</td>
+                                <td><span class="badge bg-primary">USER</span></td>
+                                <td>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"
+                                            data-row-id="row-6"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="row-7">
+                                <td>7</td>
+                                <td>Hà Viết Xuân</td>
+                                <td>0167683773</td>
+                                <td>Thành phố Hồ Chí Minh, Việt Nam</td>
+                                <td>17/04/2003</td>
+                                <td><span class="badge bg-primary">USER</span></td>
+                                <td>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"
+                                            data-row-id="row-7"></i></button>
+                                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center d-flex justify-content-center">
+                        <nav style="background: none !important;" aria-label="Page navigation example"
+                            class="text-center d-flex justify-content-center">
+                            <ul class="pagination" id="paginationControls">
+                                <li class="page-item" id="prevPage"><a class="page-link" href="#">Previous</a></li>
+                                <!-- Page numbers will be inserted here by jQuery -->
+                                <li class="page-item" id="nextPage"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Xóa tài khoản</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Bạn có chắc chắn muốn xóa người dùng này?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="button" id="deleteBtn" class="btn btn-danger">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/load-common.js"></script>
+    <script>
+        $(document).ready(function () {
+            const rowsPerPage = 5; // Number of rows to display per page
+            const rows = $('#fileTable tbody tr');
+            const paginationControls = $('#paginationControls');
+            let currentPage = 1;
+
+            function updatePagination() {
+                const visibleRows = rows.filter(':not(.d-none)');
+                const rowsCount = visibleRows.length;
+                const pageCount = Math.ceil(rowsCount / rowsPerPage); // Total number of pages
+
+                // Clear existing pagination controls
+                paginationControls.find('li.page-item:not(#prevPage, #nextPage)').remove();
+
+                // Create new pagination controls
+                for (let i = 1; i <= pageCount; i++) {
+                    paginationControls.find('#nextPage').before('<li class="page-item"><a class="page-link" href="#">' + i + '</a></li>');
+                }
+
+                // Adjust current page if it exceeds the page count
+                if (currentPage > pageCount) {
+                    currentPage = pageCount;
+                }
+
+                // Show the rows for the current page
+                showPage(currentPage);
+            }
+
+            function showPage(page) {
+                rows.hide();
+                const visibleRows = rows.filter(':not(.d-none)');
+                visibleRows.slice((page - 1) * rowsPerPage, page * rowsPerPage).show();
+            }
+
+            // Initialize the first page
+            updatePagination();
+
+            // Handle page click
+            paginationControls.on('click', 'li a', function (event) {
+                event.preventDefault();
+                const pageText = $(this).text();
+                if (pageText === 'Previous') {
+                    if (currentPage > 1) {
+                        currentPage--;
+                    }
+                } else if (pageText === 'Next') {
+                    if (currentPage < Math.ceil(rows.filter(':not(.d-none)').length / rowsPerPage)) {
+                        currentPage++;
+                    }
+                } else {
+                    currentPage = parseInt(pageText);
+                }
+                showPage(currentPage);
+            });
+
+            let rowToDelete;
+            $(document).on('click', '.delete-row-btn', function () {
+                // rowToDelete = $(this).data('row-id');
+                rowToDelete = $(this).closest('tr').attr('id');
+                console.log(rowToDelete);
+            });
+
+            $('#deleteBtn').on('click', function () {
+                console.log(rowToDelete);
+                if (rowToDelete) {
+                    $('#' + rowToDelete).addClass('d-none');
+                    updatePagination();
+                    $('#exampleModal').modal('hide');
+                }
+            });
+        });
+
+    </script>
+    <!-- <script>
+        $(document).ready(function () {
+            const rowsPerPage = 5; // Number of rows to display per page
+            const rows = $('#fileTable tbody tr');
+            const rowsCount = rows.length;
+            const pageCount = Math.ceil(rowsCount / rowsPerPage); // Total number of pages
+            const paginationControls = $('#paginationControls');
+            let currentPage = 1;
+            // Create pagination controls
+            for (let i = 1; i <= pageCount; i++) {
+                paginationControls.find('#nextPage').before('<li class="page-item"><a class="page-link" href="#">' + i + '</a></li>');
+            }
+            // Show the rows for the current page
+            function showPage(page) {
+                rows.hide();
+                rows.slice((page - 1) * rowsPerPage, page * rowsPerPage).show();
+            }
+            // Initialize the first page
+            showPage(currentPage);
+            // Handle page click
+            paginationControls.on('click', 'li a', function (event) {
+                event.preventDefault();
+                const pageText = $(this).text();
+                if (pageText === 'Previous') {
+                    if (currentPage > 1) {
+                        currentPage--;
+                    }
+                } else if (pageText === 'Next') {
+                    if (currentPage < pageCount) {
+                        currentPage++;
+                    }
+                } else {
+                    currentPage = parseInt(pageText);
+                }
+                showPage(currentPage);
+            });
+        });
+    </script> -->
+</body>
+
+</html>

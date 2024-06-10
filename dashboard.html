@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar"></aside>
+        <div class="main">
+            <!-- NAVBAR -->
+            <nav class="d-flex justify-content-end" id="header"></nav>
+            <!-- NAVBAR -->
+            <main>
+                <h3>Số liệu tổng quan</h3>
+                <div class="info-data">
+                    <div class="card">
+                        <div class="head">
+                            <div>
+                                <h2>Tài liệu đã tải</h2>
+                                <h6>21 234</h6>
+                            </div>
+                            <i class="fa-solid fa-circle-down"></i>
+                        </div>
+                        <span class="label text-success">+2 031</span>
+                    </div>
+                    <div class="card">
+                        <div class="head">
+                            <div>
+                                <h2>Tổng doanh thu</h2>
+                                <h6>$221,324.50</h6>
+                            </div>
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <span class="label text-danger"> -$2,221</span>
+                    </div>
+                    <div class="card">
+                        <div class="head">
+                            <div>
+                                <h2>Tổng số user</h2>
+                                <h6>16 703</h6>
+                            </div>
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <span class="label text-success">+3 356</span>
+                    </div>
+                    <div class="card">
+                        <div class="head">
+                            <div>
+                                <h2>Tỉ lệ chuyển đổi</h2>
+                                <h6>12.8%</h6>
+                            </div>
+                            <i class="fa-solid fa-hourglass"></i>
+                        </div>
+                        <span class="label text-danger"> -1.28%</span>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-sm-10 com-md-10 mt-3">
+                        <div>
+                            <h3>Doanh thu hàng tháng</h3>
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-10 com-md-10 mt-3">
+                        <div>
+                            <h3>Tỉ lệ tài liệu</h3>
+                            <canvas id="donutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/load-common.js"></script>
+    <script>
+        const barChart = document.getElementById('barChart');
+        new Chart(barChart, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Doanh thu tính bằng $',
+                    data: [10000, 20000, 15200, 254123, 45200, 25123, 45200, 25123, 45200, 25123, 45200, 25123],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        const donutChart = document.getElementById('donutChart');
+        new Chart(donutChart, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Tài liệu nước ngoài',
+                    'Tài liệu khoa học',
+                    'Tài liệu văn học',
+                    'Giáo trình các trường đại học',
+                    'Tài liệu khác'
+                ],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [12500, 6200, 10020, 25123, 45200],
+                    hoverOffset: 4
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>

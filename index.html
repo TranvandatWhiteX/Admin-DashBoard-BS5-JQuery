@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Studocu</title>
+    <style>
+        body {
+            background-color: #0e2238;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                                <img style="height: 500px;width: 100%;object-fit: cover;"
+                                    src="../../assets/photo-1517841905240-472988babdf9.avif" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="text-gray-900 mb-4">Welcome Back, My Admin!</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user" id="email"
+                                                aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                        </div>
+                                        <div class="form-group mt-3">
+                                            <input type="password" class="form-control form-control-user" id="password"
+                                                placeholder="Password">
+                                        </div>
+                                        <div class="form-group mt-1">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="form-check-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <div class="d-none" id="error">
+                                            <p class="text-danger">Tài khoản hoặc mật khẩu không chính xác!</p>
+                                        </div>
+                                        <div class="text-center mt-2">
+                                            <button type="button" id="loginBtn" href="index.html"
+                                                class="btn btn-primary btn-user btn-block">
+                                                Đăng nhập
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script>
+            const email = $('#email');
+            const password = $('#password');
+            const error = $('#error');
+            const loginBtn = $('#loginBtn');
+            loginBtn.on('click', function () {
+                if (email.val() == '' || password.val() == '') {
+                    error.removeClass('d-none');
+                }
+                if (email.val() != 'admin' || password.val() != 'admin') {
+                    error.removeClass('d-none');
+                } else {
+                    error.addClass('d-none');
+                    window.location.href = 'dashboard.html';
+                }
+            });
+        </script>
+</body>
+
+</html>
