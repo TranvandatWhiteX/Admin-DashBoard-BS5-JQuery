@@ -482,3 +482,9 @@ main .content-data .chart {
 main .content-data .chart::-webkit-scrollbar {
     display: none;
 }
+
+@media (max-width: 767px) {
+    .display-none {
+        display: none;
+    }
+}

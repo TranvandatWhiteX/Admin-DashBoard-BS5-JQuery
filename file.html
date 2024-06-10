@@ -73,147 +73,165 @@
                             <tr>
                                 <th>STT</th>
                                 <th>File</th>
-                                <th>Số lượt tải</th>
-                                <th>Số lượt xem</th>
-                                <th>Số lượt đánh giá</th>
-                                <th>Ngày tải lên</th>
-                                <th>Giá</th>
-                                <th>Thao tác</th>
+                                <th class="display-none">Số lượt tải</th>
+                                <th class="display-none">Số lượt xem</th>
+                                <th class="display-none">Số lượt đánh giá</th>
+                                <th class="display-none">Ngày tải lên</th>
+                                <th class="display-none">Giá</th>
+                                <th class="text-center">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr id="row-1">
                                 <td>1</td>
                                 <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình Java</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>12,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>24,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>1,528</td>
-                                <td>22/05/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>120</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>12,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>24,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>1,528</td>
+                                <td class="display-none">22/05/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>120</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-1"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-2">
                                 <td>2</td>
                                 <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình hướng đối tượng</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>141,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>142,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>15,528</td>
-                                <td>28/05/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>150</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>141,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>142,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>15,528</td>
+                                <td class="display-none">28/05/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>150</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-2"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-3">
                                 <td>3</td>
                                 <td><i class="fa-solid fa-file-pdf me-2"></i>Những người khốn khổ</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>4,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>2,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>528</td>
-                                <td>27/05/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>50</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>4,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>2,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>528</td>
+                                <td class="display-none">27/05/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>50</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                        class="btn btn-danger delete-row-btn" data-row-id="row-3"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-4">
                                 <td>4</td>
                                 <td><i class="fa-solid fa-file-pdf me-2"></i>Thiết kế web</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>50,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>29,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>9,528</td>
-                                <td>22/06/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>100</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>50,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>29,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>9,528</td>
+                                <td class="display-none">22/06/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>100</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-4"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-5">
                                 <td>5</td>
                                 <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình PLC</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>1,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>28</td>
-                                <td>22/04/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>180</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>1,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>28</td>
+                                <td class="display-none">22/04/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>180</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-5"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-6">
                                 <td>6</td>
                                 <td><i class="fa-solid fa-file-word me-2"></i>Báo cáo tài chính</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>47,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>24,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>12,528</td>
-                                <td>22/01/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>150</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>47,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>24,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>12,528</td>
+                                <td class="display-none">22/01/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>150</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-6"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-7">
                                 <td>7</td>
                                 <td><i class="fa-solid fa-file-excel me-2"></i>Nguyên lý kế toán</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>16,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>12,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>9,528</td>
-                                <td>21/05/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>170</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>16,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>12,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>9,528</td>
+                                <td class="display-none">21/05/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>170</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-7"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-8">
                                 <td>8</td>
                                 <td><i class="fa-solid fa-file-pdf me-2"></i>Thiết kế ứng dụng di động</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>14,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>10,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>8,528</td>
-                                <td>22/03/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>120</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>14,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>10,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>8,528</td>
+                                <td class="display-none">22/03/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>120</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-8"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="row-9">
                                 <td>9</td>
                                 <td><i class="fa-solid fa-file-pdf me-2"></i>Lập trình Nhúng</td>
-                                <td><i class="fa-solid fa-circle-down me-2"></i>19,524</td>
-                                <td><i class="fa-solid fa-eye me-2"></i>14,154</td>
-                                <td><i class="fa-solid fa-comment me-2"></i>7,528</td>
-                                <td>26/03/2024</td>
-                                <td><i class="fa-solid fa-dollar-sign me-2"></i>190</td>
-                                <td>
+                                <td class="display-none"><i class="fa-solid fa-circle-down me-2"></i>19,524</td>
+                                <td class="display-none"><i class="fa-solid fa-eye me-2"></i>14,154</td>
+                                <td class="display-none"><i class="fa-solid fa-comment me-2"></i>7,528</td>
+                                <td class="display-none">26/03/2024</td>
+                                <td class="display-none"><i class="fa-solid fa-dollar-sign me-2"></i>190</td>
+                                <td class="text-center">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewFileModal"><i class="fa-solid fa-file"></i></button>
-                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal" data-row-id="row-9"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                     <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
                                 </td>
                             </tr>
@@ -248,6 +266,27 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Modal Delete File -->
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Xóa tài liệu</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Bạn có chắc chắn muốn xóa tài liệu này?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="button" id="deleteBtn" class="btn btn-danger">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </main>
         </div>
     </div>
@@ -261,28 +300,34 @@
             const rowsPerPage = 5; // Number of rows to display per page
             let rows = $('#fileTable tbody tr');
             let rowsCount = rows.length;
+            let truthLength = 9;
             let pageCount = Math.ceil(rowsCount / rowsPerPage); // Total number of pages
             const paginationControls = $('#paginationControls');
             let currentPage = 1;
+
             function createPaginationControls() {
                 paginationControls.find('li.page-number').remove();
                 for (let i = 1; i <= pageCount; i++) {
                     paginationControls.find('#nextPage').before('<li class="page-item page-number"><a class="page-link" href="#">' + i + '</a></li>');
                 }
             }
+
             function showPage(page) {
                 rows.hide();
                 rows.slice((page - 1) * rowsPerPage, page * rowsPerPage).show();
             }
+
             function refreshPagination() {
-                rows = $('#fileTable tbody tr');
+                rows = $('#fileTable tbody tr').not('.d-none');
                 rowsCount = rows.length;
                 pageCount = Math.ceil(rowsCount / rowsPerPage);
                 createPaginationControls();
                 showPage(currentPage);
             }
+
             createPaginationControls();
             showPage(currentPage);
+
             paginationControls.on('click', 'li a', function (event) {
                 event.preventDefault();
                 const pageText = $(this).text();
@@ -299,32 +344,48 @@
                 }
                 showPage(currentPage);
             });
+
             $('#fileForm').on('submit', function (event) {
                 event.preventDefault();
                 const fileType = $('#fileType').val();
                 const fileName = $('#file')[0].files[0].name.substring(0, $('#file')[0].files[0].name.indexOf('.'));
                 const price = $('#price').val();
+                console.log(rows);
                 const newRow =
                     `<tr>
-                        <td>${rowsCount + 1}</td>
-                        <td><i class="fa-solid fa-file-${fileType} me-2"></i>${fileName}</td>
-                        <td><i class="fa-solid fa-circle-down me-2"></i>0</td>
-                        <td><i class="fa-solid fa-eye me-2"></i>0</td>
-                        <td><i class="fa-solid fa-comment me-2"></i>0</td>
-                        <td>${new Date().toLocaleDateString()}</td>
-                        <td><i class="fa-solid fa-dollar-sign me-2"></i>${price}</td>
-                        <td>
-                            <button class="btn btn-primary"><i class="fa-solid fa-file"></i></button>
-                            <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
-                            <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
-                        </td>
-                    </tr>`;
+                <td>${truthLength + 1}</td>
+                <td><i class="fa-solid fa-file-${fileType} me-2"></i>${fileName}</td>
+                <td><i class="fa-solid fa-circle-down me-2"></i>0</td>
+                <td><i class="fa-solid fa-eye me-2"></i>0</td>
+                <td><i class="fa-solid fa-comment me-2"></i>0</td>
+                <td>${new Date().toLocaleDateString()}</td>
+                <td><i class="fa-solid fa-dollar-sign me-2"></i>${price}</td>
+                <td>
+                    <button class="btn btn-primary"><i class="fa-solid fa-file"></i></button>
+                    <button class="btn btn-danger delete-row-btn" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-gear"></i></button>
+                </td>
+            </tr>`;
                 $('#fileTable tbody').append(newRow);
                 refreshPagination();
                 currentPage = pageCount; // Show the last page where the new row was added
                 showPage(currentPage);
             });
+
+            let rowToDelete;
+            $(document).on('click', '.delete-row-btn', function () {
+                rowToDelete = $(this).closest('tr');
+            });
+
+            $('#deleteBtn').on('click', function () {
+                if (rowToDelete) {
+                    rowToDelete.remove();
+                    refreshPagination();
+                    $('#deleteModal').modal('hide');
+                }
+            });
         });
+
     </script>
     <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
     <script>
